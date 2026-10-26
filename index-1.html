@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14532d">
+<meta name="description" content="Ma Ydi3ch | ما يضيعش">
+<title>ما يضيعش | Ma Ydi3ch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap">
+<style>
+:root{--bg:#fbf8f1;--card:#fff;--ink:#17261c;--mute:#667366;--g:#15803d;--btn:#15803d;--dk:#14532d;--mint:#e8f3ea;--line:#e6e1d3;--red:#e5484d;--cream:#f3ecda;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1611;--card:#18221b;--ink:#eef4ee;--mute:#a3b3a5;--g:#5fd08a;--mint:#1d2d21;--line:#2a392d;--cream:#222b22}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cairo',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.6;padding-bottom:76px}
+.w{max-width:1180px;margin:0 auto;padding:0 16px}
+a{color:inherit}button,select,input{font:inherit;color:inherit}button{cursor:pointer}
+:focus-visible{outline:3px solid var(--g);outline-offset:2px}
+.hd{background:var(--card);border-bottom:1px solid var(--line);position:relative;z-index:5}
+.hdi{display:flex;align-items:center;gap:10px;min-height:66px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+.lf svg{width:42px;height:42px;display:block}
+.bn{display:flex;flex-direction:column;line-height:1.15}.bn b{font-size:1.4rem;color:var(--g);white-space:nowrap}.bn i{font-style:normal;font-size:.8rem;font-weight:700;color:var(--g)}
+.tg{display:none;flex-direction:column;font-size:.72rem;white-space:nowrap;color:var(--mute);border-inline-start:1px solid var(--line);padding-inline-start:12px;line-height:1.35}
+.nv{display:none}
+.nv.open{display:flex;flex-direction:column;gap:4px;position:absolute;top:100%;left:0;right:0;background:var(--card);padding:12px 16px;border-bottom:1px solid var(--line);box-shadow:0 12px 20px rgba(0,0,0,.12)}
+.nv a,.nv button{white-space:nowrap;background:none;border:0;text-decoration:none;font-weight:600;padding:8px 2px;text-align:start;border-bottom:2px solid transparent}
+.nv .on{color:var(--g);border-bottom-color:var(--g)}
+.nv .mo{background:var(--btn);color:#fff;border-radius:10px;padding:8px 14px;text-align:center}
+.hr{display:flex;align-items:center;gap:10px;margin-inline-start:auto}
+.seg{display:flex;background:var(--mint);border-radius:99px;padding:3px}
+.seg button{border:0;background:none;border-radius:99px;padding:3px 13px;font-weight:700;color:var(--g)}.seg .on{background:var(--btn);color:#fff}
+.ln{white-space:nowrap;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:5px}.ln svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+.rg{display:none;white-space:nowrap;background:var(--btn);color:#fff;border-radius:12px;padding:8px 18px;font-weight:700;text-decoration:none}
+.bg{border:1px solid var(--line);background:none;border-radius:10px;width:42px;height:42px;font-size:1.3rem}
+.hero{position:relative;overflow:hidden;isolation:isolate;color:#fff;background:#14532d url(images/hero-mobile.webp) 62% center/cover no-repeat}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,36,18,.62),rgba(8,36,18,.8))}
+.hw{padding-block:26px 28px;min-height:540px;display:flex;align-items:center}
+.htxt{width:100%;max-width:580px}
+.badge{display:inline-block;background:var(--btn);color:#fff;border-radius:99px;padding:3px 16px;font-size:.88rem;font-weight:600}
+.hero h1{font-size:2.2rem;line-height:1.3;margin:14px 0 10px;font-weight:800}.hero h1 em{display:block;font-style:normal;color:#6ee79a}
+.hero p{margin:0 0 16px;color:#eaf5ec}
+.cta{background:#f5b21a;color:#1c1917;border:0;border-radius:14px;padding:12px 26px;font-weight:800;margin-bottom:14px}
+.sbar{display:grid;grid-template-columns:1fr auto;background:#fff;color:#17261c;border-radius:20px;padding:6px;gap:4px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.sc{grid-column:1/-1;display:flex;align-items:center;gap:6px;padding:2px 10px;border-bottom:1px solid #e6e1d3}
+.sbar select,.sbar input{border:0;background:none;color:#17261c;width:100%;padding:10px 6px;outline:0}
+.sbtn{background:var(--btn);color:#fff;border:0;border-radius:16px;width:52px;height:46px;display:flex;align-items:center;justify-content:center}
+.sbtn svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round}
+.sec{padding-block:26px 4px}.sec h2{margin:0 0 14px;font-size:1.4rem;color:var(--g)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tile{border:2px solid transparent;background:var(--card);border-radius:16px;padding:0;overflow:hidden;box-shadow:0 2px 10px rgba(30,40,20,.1);display:flex;flex-direction:column;text-align:center}
+.tile img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.tile span{padding:5px 2px;font-weight:700;font-size:.82rem}
+.tile.on{border-color:var(--btn)}
+.tile.all{background:var(--btn);color:#fff;justify-content:center;align-items:center;gap:2px;font-weight:700;font-size:.82rem;padding:6px 2px}
+.tile.all svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8}
+.ban{display:flex;align-items:stretch;overflow:hidden;border-radius:20px;border:1px solid rgba(110,231,154,.4);background:linear-gradient(135deg,#0c3a1f,#14532d);color:#fff;min-height:250px}
+.bt{flex:1;min-width:0;padding:24px 28px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.bt h3{margin:0;color:#6ee79a;display:flex;align-items:center;gap:8px;font-size:1.45rem;line-height:1.3}
+.bt p{margin:0;color:#dff3e4}
+.ban .lf svg{width:30px;height:30px;flex:none}.ban .lf path:nth-child(1){fill:#35a85c}.ban .lf path:nth-child(2){fill:#6ee79a}
+.btn3{align-self:flex-start;background:#1f9d55;color:#fff;border:0;border-radius:99px;padding:10px 24px;font-weight:700}
+.ph{flex:0 0 46%;background:url(images/seedling-hands.webp) center 20%/cover no-repeat;-webkit-mask-image:linear-gradient(to right,#000 55%,transparent 100%);mask-image:linear-gradient(to right,#000 55%,transparent 100%)}
+html[dir=ltr] .ph{-webkit-mask-image:linear-gradient(to left,#000 55%,transparent 100%);mask-image:linear-gradient(to left,#000 55%,transparent 100%)}
+@media(max-width:519px){.ban{min-height:200px}.bt{padding:16px 14px;gap:8px}.bt h3{font-size:1.1rem}.bt p{font-size:.85rem}.ph{flex-basis:38%}.btn3{padding:8px 18px}}
+.btn2{background:var(--btn);color:#fff;border:0;border-radius:99px;padding:10px 20px;font-weight:700;text-decoration:none;display:inline-block}
+.ben{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.bi{min-width:0;overflow-wrap:anywhere}
+.bi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}
+.bi .ic{width:52px;height:52px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 6px}
+.bi b{display:block}.bi small{color:var(--mute);font-size:.86rem;display:block;line-height:1.4}
+.oh{display:flex;justify-content:space-between;align-items:center}.oh h2{margin:0}
+.lk{background:none;border:0;color:var(--g);font-weight:700}
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 14px}
+.tools select{padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--card);width:100%}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 3px 14px rgba(30,40,20,.09);display:flex;flex-direction:column}
+.cimg{position:relative}.cimg img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.dc{position:absolute;top:10px;inset-inline-start:10px;background:var(--red);color:#fff;border-radius:99px;padding:1px 12px;font-weight:800}
+.av{position:absolute;top:10px;inset-inline-end:10px;background:var(--btn);color:#fff;border-radius:99px;padding:1px 12px;font-size:.82rem;font-weight:700}.av.out{background:#6b6b6b}
+.cb{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}.cb h3{margin:0;font-size:1.1rem}
+.mt{color:var(--mute);font-size:.88rem}
+.dm{background:var(--cream);color:var(--mute);border-radius:99px;padding:0 8px;font-size:.72rem;white-space:nowrap}
+.pr{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.new{font-size:1.5rem;font-weight:800;color:var(--g)}.old{text-decoration:line-through;color:var(--mute)}
+.sv{color:var(--g);font-size:.88rem}
+.qt{background:var(--mint);border-radius:10px;padding:5px 10px;font-size:.88rem}.qt.low{color:#b4531a}
+.pk{border-top:1px solid var(--line);padding-top:8px;font-size:.88rem}
+.more{margin-top:auto;background:var(--btn);color:#fff;border:0;border-radius:12px;padding:10px;font-weight:700}
+.empty{grid-column:1/-1;text-align:center;color:var(--mute);padding:34px 10px}.empty b{color:var(--ink)}.empty p{margin:4px 0 14px}
+a.tile{text-decoration:none;color:inherit}
+.chd{border-radius:18px;min-height:130px;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:14px 18px;margin:10px 0 6px;position:relative;overflow:hidden}
+.chd::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,36,18,.78),rgba(8,36,18,.1))}.chd h1{position:relative;color:#fff;margin:0}
+.mer{background:var(--mint);border-radius:20px;padding:20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:28px}
+.mer .em{font-size:3rem}.mer div{flex:1;min-width:220px}.mer h2{margin:0;color:var(--g)}.mer p{margin:4px 0 10px;color:var(--mute)}
+.steps{display:grid;gap:12px;grid-template-columns:1fr}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+.step b{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#fff;align-items:center;justify-content:center;margin-bottom:4px}
+.ft{margin-top:34px;background:var(--dk);color:#d9ecdc;padding:24px 0 22px}
+.ft .brand{color:#fff}.ft .bn b,.ft .bn i{color:#8be3a9}.ft a{color:#bfe8c9}
+.fl{display:flex;flex-wrap:wrap;gap:6px 16px;margin:12px 0}.ft small{display:block;opacity:.85}
+.bnv{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));z-index:20}
+.bnv a,.bnv button{background:none;border:0;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.72rem;color:var(--mute);min-width:56px;padding:4px 6px;border-radius:10px}
+.bnv .on{color:var(--g);font-weight:700}
+.bnv svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pg{padding-block:14px 8px}.pg h1{font-size:1.6rem;margin:8px 0}
+.back{color:var(--g);text-decoration:none;font-weight:700}
+.det{display:grid;gap:16px;margin-top:10px}
+.dimg{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;display:block}
+.note{background:var(--mint);border-radius:10px;padding:8px 10px;font-size:.88rem;margin-top:10px}
+.form{display:grid;gap:10px;max-width:420px;margin-top:10px}
+.form label{font-size:.9rem;color:var(--mute)}
+.form input,.form select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.btn{padding:11px;border-radius:12px;border:none;background:var(--btn);color:#fff;font-weight:700}.btn:disabled{opacity:.5;cursor:not-allowed}
+@media(max-width:519px){.bn b{font-size:1.2rem}.lf svg{width:34px;height:34px}.seg button{padding:3px 10px}.ln span{display:none}.hdi{gap:8px}.ln svg{width:26px;height:26px}}
+@media(max-width:359px){.bn i{display:none}.lf svg{width:30px;height:30px}.seg button{padding:3px 8px}.hr{gap:6px}.bg{width:38px}.bn b{font-size:1.1rem}}
+@media(min-width:520px){.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:760px){body{padding-bottom:0}.bnv{display:none}.grid{grid-template-columns:repeat(3,1fr)}.det{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){
+.bg,.nv .mo{display:none}
+.nv,.nv.open{display:flex;flex-direction:row;gap:16px;position:static;padding:0;border:0;box-shadow:none;background:none;margin-inline:auto}
+.hr{margin-inline-start:0}.rg{display:inline-block}
+.hero{background-image:url(images/hero-desktop.webp);background-position:center}
+.hero::before{background:linear-gradient(to right,rgba(8,36,18,.9) 0%,rgba(8,36,18,.72) 42%,rgba(8,36,18,.05) 80%)}
+.hw{min-height:470px}.htxt{margin-right:auto;max-width:640px}.hero h1{font-size:2.6rem}
+.sbar{grid-template-columns:290px 1fr auto;border-radius:99px;padding:6px 6px 6px 8px}
+.sc{grid-column:auto;border-bottom:0;border-inline-end:1px solid #e6e1d3}
+.tiles{grid-template-columns:repeat(7,1fr);gap:14px}
+.ben{grid-template-columns:repeat(4,1fr)}.tools{max-width:520px}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:1119px){.ln span{display:none}.nv,.nv.open{gap:12px}}
+@media(min-width:900px) and (max-width:1049px){.nv,.nv.open{gap:8px}.nv a,.nv button{font-size:.86rem}.rg{padding:8px 11px}.seg button{padding:3px 8px}.bn b{font-size:1.2rem}.hdi{gap:6px}}
+@media(min-width:1560px){.tg{display:flex}.nv,.nv.open{gap:22px}}
+</style>
+</head>
+<body>
+<header class="hd"><div class="w hdi">
+<a class="brand" href="#"><span class="lf"></span><span class="bn"><b>ما يضيعش</b><i>Ma Ydi3ch</i></span><span class="tg"><span>الخير ما يضيعش</span><span>Moins de gaspillage, plus d’économies.</span></span></a>
+<nav class="nv" id="nv">
+<a href="#" data-n="home" data-i="nHome"></a>
+<a href="#cat-all" data-n="cat-all" data-i="nOffers"></a>
+<button data-go="how" data-i="nHow"></button>
+<a href="#about" data-n="about" data-i="nAbout"></a>
+<a href="#contact" data-n="contact" data-i="nContact"></a>
+<a class="mo" href="#register" data-i="reg"></a>
+</nav>
+<div class="hr">
+<div class="seg"><button data-l="fr">FR</button><button data-l="ar">AR</button></div>
+<a class="ln" href="#login" data-al="login"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span data-i="login"></span></a>
+<a class="rg" href="#register" data-i="reg"></a>
+<button class="bg" id="bg" data-al="menu">☰</button>
+</div></div></header>
+
+<div id="home">
+<section class="hero" id="top"><div class="w hw"><div class="htxt">
+<span class="badge" data-i="badge"></span>
+<h1><span data-i="h1a"></span> <em data-i="h1b"></em></h1>
+<p data-i="sub"></p>
+<button class="cta" id="cta" data-i="cta"></button>
+<div class="sbar">
+<label class="sc"><span aria-hidden="true">📍</span><select id="city" data-al="cityLbl"></select></label>
+<input id="q" type="search" data-ph="ph" data-al="ph">
+<button class="sbtn" id="sgo" data-al="go"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+</div></div></div></section>
+
+<section class="w sec" id="cats"><h2 data-i="catT"></h2><div class="tiles" id="tiles"></div></section>
+
+<section class="w sec">
+<div class="ban"><div class="bt"><h3><span class="lf"></span><span data-i="banT"></span></h3><p data-i="banP"></p><button class="btn3" data-go="how" data-i="nHow"></button></div><div class="ph" aria-hidden="true"></div></div>
+<div class="ben" id="ben"></div>
+</section>
+
+
+<section class="w">
+<div class="mer"><span class="em" aria-hidden="true">🏪</span><div><h2 data-i="merT"></h2><p data-i="merP"></p><a class="btn2" href="#register" data-i="merB"></a><p class="mt" data-i="merN"></p></div></div>
+</section>
+
+<section class="w sec" id="how"><h2 data-i="howT"></h2><div class="steps" id="steps"></div></section>
+</div>
+
+<main class="w pg" id="page" hidden></main>
+
+<footer class="ft"><div class="w">
+<a class="brand" href="#"><span class="lf"></span><span class="bn"><b>ما يضيعش</b><i>Ma Ydi3ch</i></span></a>
+<div class="fl">
+<a href="#about" data-i="nAbout"></a><a href="#contact" data-i="nContact"></a><a href="#safety" data-i="safety"></a><a href="#privacy" data-i="privacy"></a><a href="#terms" data-i="terms"></a>
+</div>
+<small data-i="foot"></small>
+</div></footer>
+
+<nav class="bnv" id="bnv"></nav>
+
+<script>
+var L={
+ar:{nHome:'الرئيسية',nOffers:'العروض',nHow:'كيف يعمل؟',nAbout:'من نحن',nContact:'اتصل بنا',login:'تسجيل الدخول',reg:'إنشاء حساب',menu:'القائمة',
+badge:'منصة جزائرية لبيع الفائض الغذائي',h1a:'أطعمة لذيذة بأسعار مخفضة',h1b:'وبدون إهدار',sub:'نربط بين المحلات التي لديها فائض طعام صالح للبيع والأشخاص الذين يرغبون في شرائه بأسعار أقل. تحجز، وتستلم من المحل، وتدفع هناك.',
+cta:'اكتشف العروض',ph:'ابحث عن منتج أو محل...',cityLbl:'المدينة',allc:'ولاية الوادي (كل البلديات)',go:'بحث',
+catT:'فئات المنتجات',allCat:'جميع الفئات',cat:{cafe:'مقاهي',meals:'مطاعم',fast:'وجبات سريعة',sweets:'حلويات',bakery:'مخابز',grocery:'متاجر غذائية'},
+banT:'معًا نكافح هدر الطعام',banP:'كل منتج يُباع بدل أن يُرمى يعني توفير المال للزبون، وقيمة مستردة للتاجر.',
+ben:[['🌿','نقلل من هدر الطعام','نساعد المحلات على بيع ما تبقى بدل رميه.'],['💰','نوفر على المستهلكين','منتجات بأسعار مخفضة مناسبة للجميع.'],['🏪','ندعم التجار','نساعد المحلات على استرداد جزء من قيمة فائضها.'],['✅','معلومات واضحة','السعر والكمية ووقت الاستلام ظاهرة قبل الحجز.']],
+offT:'عروض مميزة',all:'عرض الكل',priceLbl:'السعر',anyP:'أي سعر',upTo:'حتى',sortLbl:'ترتيب',sNew:'الأحدث',sLow:'الأرخص',sDisc:'الأكبر تخفيضًا',
+avail:'متوفر',out:'نفدت الكمية',qty:'الكمية المتاحة',unit:'قطعة',left:'متبقي',pick:'وقت الاستلام',from:'من',to:'إلى',da:'دج',save:'توفير',more:'التفاصيل',demo:'تجريبي',none:'لا توجد عروض مطابقة حاليًا.',noOff:'لا توجد عروض منشورة في هذا القسم بعد.',noOffP:'ستظهر العروض هنا فور نشر التجار لها.',
+merT:'تاجر؟ انضم إلينا الآن',merP:'وسّع قاعدة زبائنك وبِع فائض منتجاتك بسهولة.',merB:'انضم كتاجر',merN:'التسجيل ونشر العروض مجانيان خلال التجربة.',
+howT:'كيف يعمل الموقع؟',steps:[['تصفّح العروض','اكتشف العروض المتاحة في منطقتك.'],['احجز كمّيتك','احجز ما تريد (يُفعَّل في مرحلة لاحقة).'],['استلم وادفع في المحل','توجّه للمحل في وقت الاستلام وادفع هناك.']],
+bn:['الرئيسية','البحث','حجوزاتي','المفضلة','حسابي'],
+safety:'سلامة الغذاء والإلغاء',privacy:'الخصوصية',terms:'الشروط',
+foot:'ما يضيعش · نسخة تجريبية · لا توجد عمليات دفع إلكتروني. المنصة وسيط ولا تصادق على سلامة الطعام، والتاجر مسؤول عن مطابقة منتجاته للقواعد المعمول بها. ',
+back:'العودة إلى العروض',nf:'الصفحة غير موجودة',nfp:'هذا العرض غير متوفر أو الرابط غير صحيح.',
+pay:'الدفع والاستلام',payp:'لا يوجد دفع إلكتروني. تدفع للتاجر مباشرة في المحل عند الاستلام وخلال الوقت المحدد.',al:'المكونات والحساسية',alp:'لم تُقدَّم هذه المعلومات لهذا العرض التجريبي. لا تعتمد على غيابها، واسأل التاجر عند الاستلام.',res:'الحجز غير متاح بعد',
+loginT:'تسجيل الدخول',regT:'إنشاء حساب',nm:'الاسم',em:'البريد الإلكتروني',pw:'كلمة المرور',ty:'نوع الحساب',cu:'زبون',me:'تاجر (يحتاج موافقة الإدارة)',soon:'الحسابات غير مفعّلة بعد، وتأتي في المرحلة 2.',noacc:'ليس لديك حساب؟',have:'لديك حساب؟',
+draft:'مسودة أولية لم تُراجع قانونيًا بعد وفق القوانين الجزائرية، ولا تُعتمد قبل مراجعتها.',
+pg:{about:['من نحن','ما يضيعش منصة وسيطة تربط محلات الطعام التي لديها فائض صالح للبيع بزبائن يبحثون عن أسعار أقل، بهدف تقليل الهدر. نبدأ تجريبيًا في ولاية الوادي.',1],
+contact:['اتصل بنا','معلومات الاتصال الرسمية (بريد إلكتروني، هاتف) ستُضاف قبل الإطلاق.',0],
+safety:['سلامة الغذاء والإلغاء','المنصة وسيط ولا تصادق على سلامة الطعام، والتاجر مسؤول عن نشر منتجات مسموح ببيعها ومعلومات صحيحة. يمكن الإبلاغ عن أي مشكلة. سياسة الحجز والإلغاء ستُحدَّد بوضوح قبل تفعيل الحجز.',1],
+privacy:['سياسة الخصوصية','سنجمع فقط البيانات الضرورية لتشغيل الحساب والحجز، ولن ننشر بيانات الاتصال الخاصة دون سبب مشروع وموافقة. التفاصيل الكاملة ومدة الاحتفاظ تُكتب قبل الإطلاق.',1],
+terms:['شروط الاستخدام','الاستخدام تجريبي حاليًا. الدفع مباشرة في المحل، ولا توجد عمولات ولا دفع إلكتروني. الشروط الكاملة تُكتب قبل الإطلاق.',1],
+reservations:['حجوزاتي','هذه الصفحة غير متاحة بعد. تُفعَّل الحجوزات في المرحلة 5، بعد الحسابات وقاعدة البيانات.',0],
+favorites:['المفضلة','هذه الصفحة غير متاحة بعد، وستُضاف بعد تفعيل الحسابات.',0]}},
+fr:{nHome:'Accueil',nOffers:'Offres',nHow:'Fonctionnement',nAbout:'À propos',nContact:'Contact',login:'Connexion',reg:'S’inscrire',menu:'Menu',
+badge:'Plateforme algérienne de vente des surplus alimentaires',h1a:'Des repas délicieux à prix réduits',h1b:'et sans gaspillage',sub:'Nous relions les commerces ayant des surplus alimentaires encore vendables aux personnes qui veulent les acheter moins cher. Vous réservez, retirez en magasin et payez sur place.',
+cta:'Découvrir les offres',ph:'Rechercher un produit ou un commerce...',cityLbl:'Ville',allc:'Wilaya d’El Oued (toutes les communes)',go:'Rechercher',
+catT:'Catégories de produits',allCat:'Toutes les catégories',cat:{cafe:'Cafés',meals:'Restaurants',fast:'Restauration rapide',sweets:'Pâtisseries',bakery:'Boulangeries',grocery:'Épiceries'},
+banT:'Ensemble contre le gaspillage',banP:'Chaque produit vendu au lieu d’être jeté fait économiser le client et rapporte au commerçant.',
+ben:[['🌿','Moins de gaspillage','Nous aidons les commerces à vendre leurs invendus au lieu de les jeter.'],['💰','Économies pour les clients','Des produits à prix réduits, accessibles à tous.'],['🏪','Soutien aux commerçants','Récupérez une partie de la valeur de vos surplus.'],['✅','Informations claires','Prix, quantité et horaire de retrait visibles avant la réservation.']],
+offT:'Offres à la une',all:'Voir tout',priceLbl:'Prix',anyP:'Tout prix',upTo:'jusqu’à',sortLbl:'Trier',sNew:'Plus récentes',sLow:'Moins chères',sDisc:'Plus grosse remise',
+avail:'Disponible',out:'Épuisé',qty:'Quantité disponible',unit:'pièce(s)',left:'restants',pick:'Horaire de retrait',from:'de',to:'à',da:'DA',save:'Économie',more:'Détails',demo:'test',none:'Aucune offre ne correspond pour le moment.',noOff:'Aucune offre publiée dans cette section pour le moment.',noOffP:'Les offres apparaîtront ici dès que les commerçants les publieront.',
+merT:'Commerçant ? Rejoignez-nous',merP:'Élargissez votre clientèle et vendez facilement vos surplus.',merB:'Rejoindre en tant que commerçant',merN:'Inscription et publication gratuites pendant la phase de test.',
+howT:'Comment ça marche ?',steps:[['Parcourez les offres','Découvrez les offres disponibles dans votre région.'],['Réservez votre quantité','Réservez ce que vous voulez (activé dans une prochaine phase).'],['Retirez et payez en magasin','Passez au commerce pendant le créneau et payez sur place.']],
+bn:['Accueil','Recherche','Réservations','Favoris','Mon compte'],
+safety:'Sécurité alimentaire et annulation',privacy:'Confidentialité',terms:'Conditions',
+foot:'Ma Ydi3ch · Version de test · Aucun paiement en ligne. La plateforme est un intermédiaire et ne certifie pas la sécurité alimentaire ; le commerçant est responsable de la conformité de ses produits. ',
+back:'Retour aux offres',nf:'Page introuvable',nfp:'Cette offre est indisponible ou le lien est incorrect.',
+pay:'Paiement et retrait',payp:'Aucun paiement en ligne. Vous payez le commerçant directement en magasin lors du retrait, pendant le créneau indiqué.',al:'Ingrédients et allergènes',alp:'Ces informations n’ont pas été fournies pour cette offre de test. Ne vous fiez pas à leur absence et demandez au commerçant lors du retrait.',res:'Réservation pas encore disponible',
+loginT:'Connexion',regT:'Créer un compte',nm:'Nom',em:'E-mail',pw:'Mot de passe',ty:'Type de compte',cu:'Client',me:'Commerçant (validation par l’administration)',soon:'Les comptes ne sont pas encore actifs (phase 2).',noacc:'Pas de compte ?',have:'Déjà un compte ?',
+draft:'Brouillon non encore vérifié juridiquement selon la réglementation algérienne. À ne pas utiliser avant vérification.',
+pg:{about:['À propos','Ma Ydi3ch est une plateforme intermédiaire qui relie les commerces alimentaires ayant des surplus encore vendables à des clients cherchant des prix plus bas, afin de réduire le gaspillage. Test à El Oued.',1],
+contact:['Contact','Les coordonnées officielles (e-mail, téléphone) seront ajoutées avant le lancement.',0],
+safety:['Sécurité alimentaire et annulation','La plateforme est un intermédiaire et ne certifie pas la sécurité alimentaire ; le commerçant est responsable de ne publier que des produits autorisés à la vente et des informations exactes. Tout problème peut être signalé. La politique de réservation et d’annulation sera précisée avant l’activation des réservations.',1],
+privacy:['Politique de confidentialité','Nous collecterons uniquement les données nécessaires au compte et à la réservation, et ne publierons pas de coordonnées privées sans motif légitime ni consentement. Le détail et la durée de conservation seront rédigés avant le lancement.',1],
+terms:['Conditions d’utilisation','Usage actuellement en test. Paiement directement en magasin, sans commission ni paiement en ligne. Les conditions complètes seront rédigées avant le lancement.',1],
+reservations:['Mes réservations','Cette page n’est pas encore disponible. Les réservations seront activées en phase 5, après les comptes et la base de données.',0],
+favorites:['Favoris','Cette page n’est pas encore disponible et viendra après l’activation des comptes.',0]}}
+};
+var IM={cafe:'images/cat-cafe.webp',meals:'images/cat-meals.webp',fast:'images/cat-fast.webp',sweets:'images/cat-sweets.webp',bakery:'images/cat-bakery.webp',grocery:'images/cat-grocery.webp'};
+var OIM={};
+var CATS=['cafe','meals','fast','sweets','bakery','grocery'];
+var CITY={eloued:{ar:'الوادي',fr:'El Oued'},guemar:{ar:'قمار',fr:'Guemar'},reguiba:{ar:'الرقيبة',fr:'Réguiba'},debila:{ar:'الدبيلة',fr:'Debila'},hassi:{ar:'حاسي خليفة',fr:'Hassi Khalifa'},baiadha:{ar:'البياضة',fr:'Baïadha'}};
+var O=[];
+var LEAF="<svg viewBox='0 0 64 64' aria-hidden='true'><path d='M30 57C15 51 7 34 13 13c19 2 29 15 29 31 0 7-4 11-12 13z' fill='#1f7a3d'/><path d='M34 53c0-19 8-35 28-41 4 23-8 39-28 41z' fill='#35a85c'/><path d='M30 57c0-15 4-27 12-37' stroke='#e8f5ea' stroke-width='2' fill='none'/></svg>";
+var IC={home:"<path d='M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z'/>",search:"<circle cx='11' cy='11' r='7'/><path d='M21 21l-4.3-4.3'/>",res:"<path d='M6 3h12v18l-3-2-3 2-3-2-3 2z'/><path d='M9 8h6M9 12h6'/>",fav:"<path d='M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z'/>",user:"<circle cx='12' cy='8' r='4'/><path d='M4 21c0-4 4-6 8-6s8 2 8 6'/>",grid:"<rect x='4' y='4' width='6' height='6' rx='1'/><rect x='14' y='4' width='6' height='6' rx='1'/><rect x='4' y='14' width='6' height='6' rx='1'/><rect x='14' y='14' width='6' height='6' rx='1'/>"};
+function ic(n){return "<svg viewBox='0 0 24 24' aria-hidden='true'>"+IC[n]+"</svg>"}
+function valid(x){return x.o>0&&x.d>=0&&x.d<x.o&&x.q>=0}
+function pct(x){return Math.round((x.o-x.d)/x.o*100)}
+var $=function(i){return document.getElementById(i)};
+var lang='ar',cat='all',pend=null;
+try{if(localStorage.getItem('lang')==='fr')lang='fr'}catch(e){}
+function fmt(n){return n.toLocaleString(lang==='ar'?'ar-DZ-u-nu-latn':'fr-DZ')}
+function img(o){return OIM[o.c]||IM[o.c]}
+
+function tr(){
+ var d=L[lang];
+ document.querySelectorAll('[data-i]').forEach(function(e){var v=d[e.getAttribute('data-i')];if(typeof v==='string')e.textContent=v});
+ document.querySelectorAll('[data-ph]').forEach(function(e){e.placeholder=d[e.getAttribute('data-ph')]});
+ document.querySelectorAll('[data-al]').forEach(function(e){e.setAttribute('aria-label',d[e.getAttribute('data-al')])});
+}
+function fill(){
+ var d=L[lang],c=$('city').value;
+ $('city').innerHTML='<option value="">'+d.allc+'</option>'+Object.keys(CITY).map(function(k){return '<option value="'+k+'">'+CITY[k][lang]+'</option>'}).join('');
+ $('city').value=c;
+ $('ben').innerHTML=d.ben.map(function(b){return '<div class="bi"><div class="ic">'+b[0]+'</div><b>'+b[1]+'</b><small>'+b[2]+'</small></div>'}).join('');
+ $('steps').innerHTML=d.steps.map(function(s,i){return '<div class="step"><b>'+(i+1)+'</b><div><strong>'+s[0]+'</strong></div><div class="mt">'+s[1]+'</div></div>'}).join('');
+}
+function tiles(){
+ var d=L[lang];
+ $('tiles').innerHTML='<a class="tile all" href="#cat-all">'+ic('grid')+'<span>'+d.allCat+'</span></a>'+
+ CATS.map(function(c){return '<a class="tile" href="#cat-'+c+'"><img src="'+IM[c]+'" alt="" loading="lazy" decoding="async"><span>'+d.cat[c]+'</span></a>'}).join('');
+}
+function bnav(){
+ var d=L[lang],h=location.hash.replace('#','');
+ var it=[['home','#',!h],['search',null,false],['res','#reservations',h==='reservations'],['fav','#favorites',h==='favorites'],['user','#login',h==='login'||h==='register']];
+ $('bnv').innerHTML=it.map(function(x,i){var c=x[2]?' class="on"':'';return x[1]?'<a href="'+x[1]+'"'+c+'>'+ic(x[0])+'<span>'+d.bn[i]+'</span></a>':'<button data-go="top" data-focus="1">'+ic(x[0])+'<span>'+d.bn[i]+'</span></button>'}).join('');
+}
+function setLang(l){
+ lang=l;try{localStorage.setItem('lang',l)}catch(e){}
+ document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
+ document.title=l==='ar'?'ما يضيعش | Ma Ydi3ch':'Ma Ydi3ch | ما يضيعش';
+ document.querySelectorAll('.seg button').forEach(function(b){b.className=b.getAttribute('data-l')===l?'on':''});
+ tr();fill();tiles();route();
+}
+var price='',sort='new';
+function card(x){
+ var d=L[lang],out=x.q===0;
+ return '<article class="card"><div class="cimg"><img src="'+img(x)+'" alt="'+x.n[lang]+'" loading="lazy" decoding="async"><span class="dc"><bdi dir="ltr">-'+pct(x)+'%</bdi></span><span class="av'+(out?' out':'')+'">'+(out?d.out:d.avail)+'</span></div><div class="cb">'+
+ '<h3>'+x.n[lang]+'</h3><div class="mt">🏪 '+x.s[lang]+'</div><div class="mt">📍 '+CITY[x.t][lang]+'</div>'+
+ '<div class="pr"><span class="new">'+fmt(x.d)+' '+d.da+'</span><span class="old">'+fmt(x.o)+' '+d.da+'</span></div>'+
+ '<div class="sv">'+d.save+': '+fmt(x.o-x.d)+' '+d.da+'</div>'+
+ '<div class="qt'+(x.q>0&&x.q<=3?' low':'')+'">'+d.qty+': '+(out?'0':x.q+' '+d.unit)+'</div>'+
+ '<div class="pk">🕒 '+d.pick+': '+d.from+' '+x.a+' '+d.to+' '+x.b+'</div>'+
+ '<button class="more" data-id="'+x.id+'">'+d.more+'</button></div></article>';
+}
+function lst(key){
+ var d=L[lang],q=$('q').value.trim().toLowerCase(),ct=$('city').value,mp=+price;
+ var l=O.filter(function(x){
+  if(!valid(x))return false;
+  if(key!=='all'&&x.c!==key)return false;
+  if(ct&&x.t!==ct)return false;
+  if(mp&&x.d>mp)return false;
+  if(q&&(x.n[lang]+' '+x.s[lang]+' '+d.cat[x.c]).toLowerCase().indexOf(q)<0)return false;
+  return true;
+ });
+ l.sort(function(a,b){return (a.q===0)-(b.q===0)||(sort==='low'?a.d-b.d:sort==='disc'?pct(b)-pct(a):b.id-a.id)});
+ return l;
+}
+function cards(key){
+ var d=L[lang],l=lst(key);
+ if(l.length)return l.map(card).join('');
+ return '<div class="empty"><div style="font-size:2.4rem">📭</div><b>'+(O.length?d.none:d.noOff)+'</b>'+(O.length?'':'<p>'+d.noOffP+'</p>')+'<a class="btn2" href="#register">'+d.merB+'</a></div>';
+}
+function listing(key){
+ var d=L[lang],t=key==='all'?d.nOffers:d.cat[key];
+ var hd=key==='all'?'<h1>'+t+'</h1>':'<div class="chd" style="background-image:url('+IM[key]+')"><h1>'+t+'</h1></div>';
+ var po='<option value="">'+d.anyP+'</option>'+[200,300,500].map(function(n){return '<option value="'+n+'"'+(String(n)===price?' selected':'')+'>'+d.upTo+' '+n+' '+d.da+'</option>'}).join('');
+ var so=[['new',d.sNew],['low',d.sLow],['disc',d.sDisc]].map(function(a){return '<option value="'+a[0]+'"'+(a[0]===sort?' selected':'')+'>'+a[1]+'</option>'}).join('');
+ return '<a class="back" href="#">'+d.nHome+'</a>'+hd+
+ (O.length?'<div class="tools"><select id="price" aria-label="'+d.priceLbl+'">'+po+'</select><select id="sort" aria-label="'+d.sortLbl+'">'+so+'</select></div>':'')+
+ '<div class="grid" id="lgrid">'+cards(key)+'</div>';
+}
+function route(){
+ var h=location.hash.replace('#',''),home=$('home'),pg=$('page');
+ $('nv').className='nv';
+ document.querySelectorAll('.nv [data-n]').forEach(function(a){a.className=a.getAttribute('data-n')===(h.indexOf('cat-')===0?'cat-all':(h||'home'))?'on':''});
+ bnav();
+ if(!h){home.hidden=false;pg.hidden=true;if(pend)setTimeout(doScroll,40);return}
+ home.hidden=true;pg.hidden=false;pg.innerHTML=page(h);window.scrollTo(0,0);
+}
+function doScroll(){var e=pend&&$(pend),f=$('q');pend=null;if(e)e.scrollIntoView({behavior:'smooth',block:'start'});}
+function go(id,focus){pend=id;if(location.hash){location.hash=''}else{doScroll()}if(focus)setTimeout(function(){$('q').focus({preventScroll:true})},500)}
+function page(h){
+ var x=L[lang],back='<a class="back" href="#">'+x.nHome+'</a>',m;
+ if(h.indexOf('cat-')===0){var k=h.slice(4);if(k==='all'||CATS.indexOf(k)>=0)return listing(k)}
+ if(h.indexOf('offer-')===0){
+  var o=O.filter(function(k){return 'offer-'+k.id===h&&valid(k)})[0];
+  if(!o)return back+'<h1>'+x.nf+'</h1><p class="mt">'+x.nfp+'</p>';
+  return '<a class="back" href="#cat-'+o.c+'">'+x.cat[o.c]+'</a><div class="det"><img class="dimg" src="'+img(o)+'" alt="'+o.n[lang]+'"><div><h1>'+o.n[lang]+'</h1><div class="mt">🏪 '+o.s[lang]+' <span class="dm">'+x.demo+'</span> · 📍 '+CITY[o.t][lang]+'</div>'+
+  '<div class="pr"><span class="new">'+fmt(o.d)+' '+x.da+'</span><span class="old">'+fmt(o.o)+' '+x.da+'</span><span class="sv" dir="ltr">-'+pct(o)+'%</span></div>'+
+  '<p>🕒 '+x.pick+': '+x.from+' '+o.a+' '+x.to+' '+o.b+'<br>'+x.qty+': '+(o.q===0?x.out:o.q+' '+x.unit)+'</p>'+
+  '<div class="note"><b>'+x.pay+'</b><br>'+x.payp+'</div><div class="note"><b>'+x.al+'</b><br>'+x.alp+'</div>'+
+  '<button class="btn" disabled style="width:100%;margin-top:10px">'+x.res+'</button></div></div>';
+ }
+ if(h==='login'||h==='register'){
+  var r=h==='register';
+  return back+'<h1>'+(r?x.regT:x.loginT)+'</h1><div class="form">'+
+  (r?'<label for="f1">'+x.nm+'</label><input id="f1" autocomplete="name">':'')+
+  '<label for="f2">'+x.em+'</label><input id="f2" type="email" autocomplete="email">'+
+  '<label for="f3">'+x.pw+'</label><input id="f3" type="password" autocomplete="'+(r?'new-password':'current-password')+'">'+
+  (r?'<label for="f4">'+x.ty+'</label><select id="f4"><option>'+x.cu+'</option><option>'+x.me+'</option></select>':'')+
+  '<button class="btn" disabled>'+(r?x.regT:x.loginT)+'</button><div class="note">'+x.soon+'</div>'+
+  '<div class="mt">'+(r?x.have+' <a class="back" href="#login">'+x.loginT+'</a>':x.noacc+' <a class="back" href="#register">'+x.regT+'</a>')+'</div></div>';
+ }
+ m=x.pg[h];
+ if(m)return back+'<h1>'+m[0]+'</h1><p>'+m[1]+'</p>'+(m[2]?'<div class="note">'+x.draft+'</div>':'');
+ return back+'<h1>'+x.nf+'</h1>';
+}
+document.addEventListener('click',function(e){
+ var t=e.target,el;
+ if(el=t.closest('[data-l]')){setLang(el.getAttribute('data-l'));return}
+ if(el=t.closest('[data-id]')){location.hash='offer-'+el.getAttribute('data-id');return}
+ if(el=t.closest('[data-go]')){go(el.getAttribute('data-go'),el.getAttribute('data-focus'));return}
+ if(t.closest('#bg')){$('nv').classList.toggle('open');return}
+ if(t.closest('#cta')){go('cats');return}
+ if(t.closest('#sgo')){location.hash='cat-all';return}
+});
+$('q').addEventListener('keydown',function(e){if(e.key==='Enter')location.hash='cat-all'});
+document.addEventListener('change',function(e){var t=e.target;if(t.id==='price'||t.id==='sort'){if(t.id==='price')price=t.value;else sort=t.value;var g=$('lgrid');if(g)g.innerHTML=cards(location.hash.replace('#','').slice(4))}});
+window.addEventListener('hashchange',route);
+document.querySelectorAll('.lf').forEach(function(e){e.innerHTML=LEAF});
+setLang(lang);
+</script>
+</body>
+</html>
