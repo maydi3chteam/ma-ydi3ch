@@ -112,6 +112,7 @@ a.tile{text-decoration:none;color:inherit}
 .form label{font-size:.9rem;color:var(--mute)}
 .form input,.form select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
 .btn{padding:11px;border-radius:12px;border:none;background:var(--btn);color:#fff;font-weight:700}.btn:disabled{opacity:.5;cursor:not-allowed}
+.err{color:var(--red);font-size:.9rem;min-height:1.2em}.ok{color:var(--g);font-size:.9rem}
 @media(max-width:519px){.bn b{font-size:1.2rem}.lf svg{width:34px;height:34px}.seg button{padding:3px 10px}.ln span{display:none}.hdi{gap:8px}.ln svg{width:26px;height:26px}}
 @media(max-width:359px){.bn i{display:none}.lf svg{width:30px;height:30px}.seg button{padding:3px 8px}.hr{gap:6px}.bg{width:38px}.bn b{font-size:1.1rem}}
 @media(min-width:520px){.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:repeat(3,1fr)}}
@@ -207,7 +208,7 @@ safety:'سلامة الغذاء والإلغاء',privacy:'الخصوصية',ter
 foot:'ما يضيعش · نسخة تجريبية · لا توجد عمليات دفع إلكتروني. المنصة وسيط ولا تصادق على سلامة الطعام، والتاجر مسؤول عن مطابقة منتجاته للقواعد المعمول بها. ',
 back:'العودة إلى العروض',nf:'الصفحة غير موجودة',nfp:'هذا العرض غير متوفر أو الرابط غير صحيح.',
 pay:'الدفع والاستلام',payp:'لا يوجد دفع إلكتروني. تدفع للتاجر مباشرة في المحل عند الاستلام وخلال الوقت المحدد.',al:'المكونات والحساسية',alp:'لم تُقدَّم هذه المعلومات لهذا العرض التجريبي. لا تعتمد على غيابها، واسأل التاجر عند الاستلام.',res:'الحجز غير متاح بعد',
-loginT:'تسجيل الدخول',regT:'إنشاء حساب',nm:'الاسم',em:'البريد الإلكتروني',pw:'كلمة المرور',ty:'نوع الحساب',cu:'زبون',me:'تاجر (يحتاج موافقة الإدارة)',soon:'الحسابات غير مفعّلة بعد، وتأتي في المرحلة 2.',noacc:'ليس لديك حساب؟',have:'لديك حساب؟',
+loginT:'تسجيل الدخول',regT:'إنشاء حساب',nm:'الاسم',em:'البريد الإلكتروني',pw:'كلمة المرور',ty:'نوع الحساب',cu:'زبون',me:'تاجر (يحتاج موافقة الإدارة)',soon:'تعذّر تفعيل الحسابات الآن. تحقق من الاتصال ثم حدّث الصفحة.',acct:'حسابي',logout:'تسجيل الخروج',forgot:'نسيت كلمة المرور؟',resetT:'استعادة كلمة المرور',resetOk:'إن كان البريد مسجلًا لدينا فستصلك رسالة لاستعادة كلمة المرور.',roles:{customer:'زبون',merchant:'تاجر',admin:'مدير'},save:'حفظ',saved:'تم الحفظ.',loading:'جارٍ التحميل...',needLogin:'سجّل الدخول للوصول إلى حسابك.',pwHint:'كلمة المرور 8 أحرف على الأقل.',e_exists:'هذا البريد مسجل مسبقًا.',e_email:'البريد الإلكتروني غير صحيح.',e_weak:'كلمة المرور ضعيفة: استعمل 8 أحرف على الأقل.',e_name:'اكتب اسمًا من حرفين على الأقل.',e_cred:'البريد أو كلمة المرور غير صحيحة.',e_many:'محاولات كثيرة. انتظر قليلًا ثم أعد المحاولة.',e_net:'تعذّر الاتصال. تحقق من الإنترنت.',e_perm:'لم يُسمح بإتمام العملية. أعد المحاولة لاحقًا.',e_gen:'حدث خطأ غير متوقع. أعد المحاولة.',noacc:'ليس لديك حساب؟',have:'لديك حساب؟',
 draft:'مسودة أولية لم تُراجع قانونيًا بعد وفق القوانين الجزائرية، ولا تُعتمد قبل مراجعتها.',
 pg:{about:['من نحن','ما يضيعش منصة وسيطة تربط محلات الطعام التي لديها فائض صالح للبيع بزبائن يبحثون عن أسعار أقل، بهدف تقليل الهدر. نبدأ تجريبيًا في ولاية الوادي.',1],
 contact:['اتصل بنا','معلومات الاتصال الرسمية (بريد إلكتروني، هاتف) ستُضاف قبل الإطلاق.',0],
@@ -231,7 +232,7 @@ safety:'Sécurité alimentaire et annulation',privacy:'Confidentialité',terms:'
 foot:'Ma Ydi3ch · Version de test · Aucun paiement en ligne. La plateforme est un intermédiaire et ne certifie pas la sécurité alimentaire ; le commerçant est responsable de la conformité de ses produits. ',
 back:'Retour aux offres',nf:'Page introuvable',nfp:'Cette offre est indisponible ou le lien est incorrect.',
 pay:'Paiement et retrait',payp:'Aucun paiement en ligne. Vous payez le commerçant directement en magasin lors du retrait, pendant le créneau indiqué.',al:'Ingrédients et allergènes',alp:'Ces informations n’ont pas été fournies pour cette offre de test. Ne vous fiez pas à leur absence et demandez au commerçant lors du retrait.',res:'Réservation pas encore disponible',
-loginT:'Connexion',regT:'Créer un compte',nm:'Nom',em:'E-mail',pw:'Mot de passe',ty:'Type de compte',cu:'Client',me:'Commerçant (validation par l’administration)',soon:'Les comptes ne sont pas encore actifs (phase 2).',noacc:'Pas de compte ?',have:'Déjà un compte ?',
+loginT:'Connexion',regT:'Créer un compte',nm:'Nom',em:'E-mail',pw:'Mot de passe',ty:'Type de compte',cu:'Client',me:'Commerçant (validation par l’administration)',soon:'Impossible d’activer les comptes pour le moment. Vérifiez la connexion puis actualisez la page.',acct:'Mon compte',logout:'Se déconnecter',forgot:'Mot de passe oublié ?',resetT:'Réinitialiser le mot de passe',resetOk:'Si cet e-mail est enregistré, vous recevrez un message pour réinitialiser votre mot de passe.',roles:{customer:'Client',merchant:'Commerçant',admin:'Administrateur'},save:'Enregistrer',saved:'Enregistré.',loading:'Chargement...',needLogin:'Connectez-vous pour accéder à votre compte.',pwHint:'Mot de passe : 8 caractères minimum.',e_exists:'Cet e-mail est déjà enregistré.',e_email:'Adresse e-mail invalide.',e_weak:'Mot de passe trop faible : 8 caractères minimum.',e_name:'Saisissez un nom d’au moins 2 caractères.',e_cred:'E-mail ou mot de passe incorrect.',e_many:'Trop de tentatives. Patientez puis réessayez.',e_net:'Connexion impossible. Vérifiez Internet.',e_perm:'L’opération n’a pas été autorisée. Réessayez plus tard.',e_gen:'Une erreur inattendue est survenue. Réessayez.',noacc:'Pas de compte ?',have:'Déjà un compte ?',
 draft:'Brouillon non encore vérifié juridiquement selon la réglementation algérienne. À ne pas utiliser avant vérification.',
 pg:{about:['À propos','Ma Ydi3ch est une plateforme intermédiaire qui relie les commerces alimentaires ayant des surplus encore vendables à des clients cherchant des prix plus bas, afin de réduire le gaspillage. Test à El Oued.',1],
 contact:['Contact','Les coordonnées officielles (e-mail, téléphone) seront ajoutées avant le lancement.',0],
@@ -277,7 +278,7 @@ function tiles(){
 }
 function bnav(){
  var d=L[lang],h=location.hash.replace('#','');
- var it=[['home','#',!h],['search',null,false],['res','#reservations',h==='reservations'],['fav','#favorites',h==='favorites'],['user','#login',h==='login'||h==='register']];
+ var it=[['home','#',!h],['search',null,false],['res','#reservations',h==='reservations'],['fav','#favorites',h==='favorites'],['user',AU.user?'#account':'#login',h==='login'||h==='register'||h==='account']];
  $('bnv').innerHTML=it.map(function(x,i){var c=x[2]?' class="on"':'';return x[1]?'<a href="'+x[1]+'"'+c+'>'+ic(x[0])+'<span>'+d.bn[i]+'</span></a>':'<button data-go="top" data-focus="1">'+ic(x[0])+'<span>'+d.bn[i]+'</span></button>'}).join('');
 }
 function setLang(l){
@@ -285,7 +286,7 @@ function setLang(l){
  document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
  document.title=l==='ar'?'ما يضيعش | Ma Ydi3ch':'Ma Ydi3ch | ما يضيعش';
  document.querySelectorAll('.seg button').forEach(function(b){b.className=b.getAttribute('data-l')===l?'on':''});
- tr();fill();tiles();route();
+ syncHeader();tr();fill();tiles();route();
 }
 var price='',sort='new';
 function card(x){
@@ -327,6 +328,8 @@ function listing(key){
 }
 function route(){
  var h=location.hash.replace('#',''),home=$('home'),pg=$('page');
+ if(AU.user&&(h==='login'||h==='register')){location.hash='account';return}
+ if(h==='account'&&AU.known&&!AU.user){AU.notice=1;location.hash='login';return}
  $('nv').className='nv';
  document.querySelectorAll('.nv [data-n]').forEach(function(a){a.className=a.getAttribute('data-n')===(h.indexOf('cat-')===0?'cat-all':(h||'home'))?'on':''});
  bnav();
@@ -347,22 +350,72 @@ function page(h){
   '<div class="note"><b>'+x.pay+'</b><br>'+x.payp+'</div><div class="note"><b>'+x.al+'</b><br>'+x.alp+'</div>'+
   '<button class="btn" disabled style="width:100%;margin-top:10px">'+x.res+'</button></div></div>';
  }
- if(h==='login'||h==='register'){
-  var r=h==='register';
-  return back+'<h1>'+(r?x.regT:x.loginT)+'</h1><div class="form">'+
-  (r?'<label for="f1">'+x.nm+'</label><input id="f1" autocomplete="name">':'')+
-  '<label for="f2">'+x.em+'</label><input id="f2" type="email" autocomplete="email">'+
-  '<label for="f3">'+x.pw+'</label><input id="f3" type="password" autocomplete="'+(r?'new-password':'current-password')+'">'+
-  (r?'<label for="f4">'+x.ty+'</label><select id="f4"><option>'+x.cu+'</option><option>'+x.me+'</option></select>':'')+
-  '<button class="btn" disabled>'+(r?x.regT:x.loginT)+'</button><div class="note">'+x.soon+'</div>'+
-  '<div class="mt">'+(r?x.have+' <a class="back" href="#login">'+x.loginT+'</a>':x.noacc+' <a class="back" href="#register">'+x.regT+'</a>')+'</div></div>';
+ if(h==='login'||h==='register'||h==='reset'){
+  var r=h==='register',w=h==='reset',on=AU.ready,nt=AU.notice;AU.notice=0;
+  var tt=w?x.resetT:(r?x.regT:x.loginT);
+  return back+'<h1>'+tt+'</h1><div class="form" id="af">'+
+  (nt?'<div class="note">'+x.needLogin+'</div>':'')+
+  (r?'<label for="f1">'+x.nm+'</label><input id="f1" autocomplete="name" maxlength="60">':'')+
+  '<label for="f2">'+x.em+'</label><input id="f2" type="email" autocomplete="email" inputmode="email">'+
+  (w?'':'<label for="f3">'+x.pw+'</label><input id="f3" type="password" autocomplete="'+(r?'new-password':'current-password')+'">')+
+  (r?'<div class="mt">'+x.pwHint+'</div><label for="f4">'+x.ty+'</label><select id="f4"><option value="customer">'+x.cu+'</option><option value="merchant">'+x.me+'</option></select>':'')+
+  '<div class="err" id="aerr" role="alert"></div><div class="ok" id="aok" role="status"></div>'+
+  '<button class="btn" data-act="'+(w?'reset':(r?'register':'login'))+'"'+(on?'':' disabled')+'>'+tt+'</button>'+
+  ((on||!AU.known)?'':'<div class="note">'+x.soon+'</div>')+
+  (h==='login'?'<div class="mt"><a class="back" href="#reset">'+x.forgot+'</a></div>':'')+
+  '<div class="mt">'+(r?x.have+' <a class="back" href="#login">'+x.loginT+'</a>':(w?'<a class="back" href="#login">'+x.loginT+'</a>':x.noacc+' <a class="back" href="#register">'+x.regT+'</a>'))+'</div></div>';
+ }
+ if(h==='account'){
+  if(!AU.known)return '<p class="mt">'+x.loading+'</p>';
+  if(!AU.user)return back+'<div class="note">'+x.needLogin+'</div>';
+  var p=AU.profile||{};
+  return back+'<h1>'+x.acct+'</h1><div class="form" id="af"><label>'+x.em+'</label><div><b dir="ltr">'+esc(AU.user.email)+'</b></div><label>'+x.ty+'</label><div><b>'+esc(x.roles[p.role]||x.roles.customer)+'</b></div><label for="f1">'+x.nm+'</label><input id="f1" autocomplete="name" maxlength="60" value="'+esc(p.displayName||AU.user.displayName||'')+'"><div class="err" id="aerr" role="alert"></div><div class="ok" id="aok" role="status"></div><button class="btn" data-act="save">'+x.save+'</button><button class="btn" style="background:var(--mute)" data-act="logout">'+x.logout+'</button></div>';
  }
  m=x.pg[h];
  if(m)return back+'<h1>'+m[0]+'</h1><p>'+m[1]+'</p>'+(m[2]?'<div class="note">'+x.draft+'</div>':'');
  return back+'<h1>'+x.nf+'</h1>';
 }
+var AU={ready:false,known:false,user:null,profile:null,notice:0,langDone:0};
+function esc(v){return String(v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function syncHeader(){
+ var u=!!AU.user,a=document.querySelector('.ln'),r=document.querySelector('.rg'),m=document.querySelector('.nv .mo');
+ a.setAttribute('href',u?'#account':'#login');a.setAttribute('data-al',u?'acct':'login');a.querySelector('span').setAttribute('data-i',u?'acct':'login');
+ r.style.display=u?'none':'';m.style.display=u?'none':'';
+}
+function onAuth(e){
+ var d=e.detail||{},was=AU.known,prev=AU.user?AU.user.uid:'';
+ AU.known=true;AU.ready=!!d.ready;AU.user=d.user||null;AU.profile=d.profile||null;
+ var cu=AU.user?AU.user.uid:'';
+ if(AU.user&&AU.profile&&!AU.langDone){AU.langDone=1;var pl=AU.profile.lang;if((pl==='ar'||pl==='fr')&&pl!==lang){setLang(pl);return}}
+ syncHeader();tr();
+ if(!was||prev!==cu||location.hash==='#account')route();
+}
+function msg(id,t){var e=$(id);if(e)e.textContent=t||''}
+function errText(e){
+ var d=L[lang],c=(e&&e.code)||'';
+ var m={'auth/email-already-in-use':'e_exists','auth/invalid-email':'e_email','auth/missing-email':'e_email','auth/weak-password':'e_weak','app/weak':'e_weak','app/name':'e_name','auth/invalid-credential':'e_cred','auth/wrong-password':'e_cred','auth/user-not-found':'e_cred','auth/missing-password':'e_cred','auth/too-many-requests':'e_many','auth/network-request-failed':'e_net','permission-denied':'e_perm'};
+ return d[m[c]||'e_gen'];
+}
+async function doAct(a){
+ var d=L[lang],M=window.Ma;if(!M||!AU.ready)return;
+ var b=document.querySelector('[data-act="'+a+'"]');if(b)b.disabled=true;msg('aerr','');msg('aok','');
+ try{
+  if(a==='login'){await M.login($('f2').value.trim(),$('f3').value)}
+  else if(a==='register'){
+   var n=$('f1').value.trim(),em=$('f2').value.trim(),pw=$('f3').value;
+   if(n.length<2)throw {code:'app/name'};
+   if(pw.length<8)throw {code:'app/weak'};
+   await M.register(n,em,pw,$('f4').value==='merchant',lang);
+  }
+  else if(a==='reset'){await M.reset($('f2').value.trim());msg('aok',d.resetOk)}
+  else if(a==='save'){var n2=$('f1').value.trim();if(n2.length<2)throw {code:'app/name'};await M.saveProfile(n2,lang);msg('aok',d.saved)}
+  else if(a==='logout'){await M.logout();location.hash=''}
+ }catch(e){msg('aerr',errText(e))}
+ var b2=document.querySelector('[data-act="'+a+'"]');if(b2)b2.disabled=false;
+}
 document.addEventListener('click',function(e){
  var t=e.target,el;
+ if(el=t.closest('[data-act]')){doAct(el.getAttribute('data-act'));return}
  if(el=t.closest('[data-l]')){setLang(el.getAttribute('data-l'));return}
  if(el=t.closest('[data-id]')){location.hash='offer-'+el.getAttribute('data-id');return}
  if(el=t.closest('[data-go]')){go(el.getAttribute('data-go'),el.getAttribute('data-focus'));return}
@@ -374,7 +427,12 @@ $('q').addEventListener('keydown',function(e){if(e.key==='Enter')location.hash='
 document.addEventListener('change',function(e){var t=e.target;if(t.id==='price'||t.id==='sort'){if(t.id==='price')price=t.value;else sort=t.value;var g=$('lgrid');if(g)g.innerHTML=cards(location.hash.replace('#','').slice(4))}});
 window.addEventListener('hashchange',route);
 document.querySelectorAll('.lf').forEach(function(e){e.innerHTML=LEAF});
+document.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.closest&&e.target.closest('#af')&&e.target.tagName==='INPUT'){var b=document.querySelector('#af [data-act]');if(b&&!b.disabled)b.click()}});
+window.addEventListener('ma-auth',onAuth);
 setLang(lang);
+if(window.MaLast)onAuth({detail:window.MaLast});
+setTimeout(function(){if(!AU.known){AU.known=true;AU.ready=false;syncHeader();tr();route()}},8000);
 </script>
+<script type="module" src="js/auth.js"></script>
 </body>
 </html>
